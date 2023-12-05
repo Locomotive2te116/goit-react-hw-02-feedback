@@ -1,13 +1,13 @@
 import React from 'react';
-
-export const feedbackData = () => {
+// import { handlerChangeState } from '../App';
+export const Feedback = ({ handlerChangeState }) => {
   return (
     <>
       <div>
         <p>Please leave feedback</p>
-        <button>Good</button>
-        <button>Neutral</button>
-        <button>Bad</button>
+        <button onClick={() => handlerChangeState('good')}>Good</button>
+        <button onClick={() => handlerChangeState('neutral')}>Neutral</button>
+        <button onClick={() => handlerChangeState('bad')}>Bad</button>
       </div>
     </>
   );
