@@ -1,13 +1,15 @@
-import React from 'react';
-
-export const Feedback = ({ handlerChangeState }) => {
+export const FeedbackOptions = ({ options, handleFeedback }) => {
   return (
-    <>
-      <div>
-        <button onClick={() => handlerChangeState('good')}>Good</button>
-        <button onClick={() => handlerChangeState('neutral')}>Neutral</button>
-        <button onClick={() => handlerChangeState('bad')}>Bad</button>
-      </div>
-    </>
+    <div>
+      {options.map(option => (
+        <button
+          type="button"
+          key={option}
+          onClick={() => handleFeedback(option)}
+        >
+          {option}
+        </button>
+      ))}
+    </div>
   );
 };
